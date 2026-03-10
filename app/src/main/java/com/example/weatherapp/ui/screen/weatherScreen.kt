@@ -309,12 +309,13 @@ fun WeatherScreen(viewModel: WeatherViewModel = viewModel()) {
 
                         items(7) { index ->
 
-                            val hourIndex =
-                                currentHourIndex + index
+                            val hourIndex = currentHourIndex + index + 1
 
-                            val label =
-                                if (index == 0) "Now"
-                                else "After $index hr"
+                            val time =
+                                weather.hourly.time[hourIndex]
+                                    .substring(11,16)
+
+                            val label = "At $time"
 
                             val temp =
                                 weather.hourly.temperature_2m[hourIndex]
