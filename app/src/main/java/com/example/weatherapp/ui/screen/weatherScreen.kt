@@ -1,6 +1,7 @@
 package com.example.weatherapp.ui
 
 import android.Manifest
+import android.util.Log
 import android.widget.Toast
 import java.util.Calendar
 
@@ -10,10 +11,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,8 +24,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-
-import com.example.weather.R
 import com.example.weatherapp.location.getCurrentLocation
 import com.example.weatherapp.location.getCityName
 import com.example.weatherapp.location.getCoordinatesFromCity
